@@ -1,0 +1,140 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Your+Font+Family:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Body styles */
+body {
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-color: #ccc;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 350px;
+    cursor: pointer;
+    margin:2%;
+    opacity: 0.7;
+    
+}
+
+nav {
+    width: 85%;
+    margin: auto;
+    padding: 10px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    font-size: large;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px; 
+    position: relative;
+}
+
+nav ul li a {
+    color: #ff0077;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav ul li a:hover{
+    background-image: linear-gradient(to right,#F79F79, #F7D08A, #E3F09B, #87B6A7, #5B5941);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-color: #FFD700;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.dropdownmenu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    opacity: 0; 
+    transition: 0.7s ease-in-out; 
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+    opacity: 1;
+    
+}
+
+
+media screen and (max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+
+    /* Hamburger menu icon styling */
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-container.active {
+        display: flex;
+    }
+
+    .nav-container li {
+        margin: 20px 0;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+}
+
+@media all and (max-width: 323px) {
+    .logo {
+        width: 80px;
+    }
+}
